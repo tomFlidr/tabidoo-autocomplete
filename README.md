@@ -1,6 +1,6 @@
 # Tabidoo Autocomplete
 
-[![Latest Stable Version](https://img.shields.io/badge/Stable-v0.0.1-brightgreen.svg?style=plastic)](https://github.com/tomFlidr/tabidoo-autocomplete/releases)
+[![Latest Stable Version](https://img.shields.io/badge/Stable-v0.0.2-brightgreen.svg?style=plastic)](https://github.com/tomFlidr/tabidoo-autocomplete/releases)
 ![TS Version](https://img.shields.io/badge/TS->=5.0.4-brightgreen.svg?style=plastic)
 
 
