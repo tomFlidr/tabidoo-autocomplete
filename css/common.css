@@ -1,0 +1,41 @@
+:root{
+	--color-primary:#007ad9;
+}
+body{
+	padding:20px;
+	background:pink;
+}
+
+form{
+	margin:0 auto;
+}
+form .input-cont{
+	display:table;
+	position:relative;
+}
+form input.tabidoo-autocomplete{
+	padding:15px 30px;
+	border:10px solid rgba(255,0,0,0.5);
+	outline:none;
+	cursor:text;
+	background:rgba(255,255,255,0.5);
+}
+
+.lightbox{
+	/*position:fixed;*/
+	top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-content{
+	overflow: auto;
+    width: 800px;
+    height: 600px;
+    background: #fff;
+    position: relative;
+    /*top: calc(50% - 300px);*/
+    /*left: calc(50% - 400px);*/
+}
