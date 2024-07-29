@@ -54,9 +54,9 @@ Autocomplete component for Tabidoo TypeScript environent.
       
           var value = '', 
               text = '';
-          if (doo.model.firma.value != null) {
+          if (doo.model.company.value != null) {
               value = doo.model.company.value.companyName;
-              text = `${doo.model.company.value.companyName} (${doo.model.firma.value.vatId})`;
+              text = `${doo.model.company.value.companyName} (${doo.model.company.value.vatId})`;
           }
       
           var autocomplete = doo.tabidooAutocomplete.CreateInstance<IDooApiTableCompany>({
