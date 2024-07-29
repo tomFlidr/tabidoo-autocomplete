@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+js/build/*
+js/libs.orig/*
+src/run.orig.ts
