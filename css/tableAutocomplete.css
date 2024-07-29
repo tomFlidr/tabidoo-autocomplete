@@ -1,0 +1,102 @@
+input.tabidoo-autocomplete-input{
+	padding-right:calc(1.5em + 12px + 12px) !important;
+}
+.tabidoo-autocomplete-hidden{
+	display:none !important;
+}
+.tabidoo-autocomplete-container{
+	position:absolute;
+	top:0;
+	left:0;
+}
+.tabidoo-autocomplete-container.tabidoo-autocomplete-fixed{
+	position:fixed;
+}
+.tabidoo-autocomplete-whisper{
+	position:relative;
+	border:1px solid #c8c8c8;
+    padding:0;
+	margin-top:1px;
+	background:#fff;
+	display:flex;
+	flex-direction:column;
+}
+.tabidoo-autocomplete-loading{
+	color:var(--color-primary);
+	margin:5px 0;
+	align-self:center;
+}
+.tabidoo-autocomplete-loading,
+.tabidoo-autocomplete-loading:after {
+	box-sizing: border-box;
+}
+.tabidoo-autocomplete-loading{
+	display:inline-block;
+	width:40px;
+	height:40px;
+}
+.tabidoo-autocomplete-loading:after{
+	content: " ";
+	display: block;
+	width:32px;
+	height:32px;
+	margin:4px;
+	border-radius:50%;
+	border:3.2px solid currentColor;
+	border-color: currentColor transparent currentColor transparent;
+	animation: tabidoo-autocomplete-loading 1.2s linear infinite;
+}
+@keyframes tabidoo-autocomplete-loading{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.tabidoo-autocomplete-options{
+	overflow-y: auto;
+}
+.tabidoo-autocomplete-option{
+    display:flex;
+    flex-direction:row;
+}
+.tabidoo-autocomplete-button{
+	display:block;
+	white-space:nowrap;
+	width:100%;
+    text-align:left;
+    border:0;
+    outline:0;
+    padding:5.5px 11px;
+	line-height:2.6em;
+    height:40px;
+	background:transparent;
+	cursor:pointer;
+	color:#333;
+}
+.tabidoo-autocomplete-option-active .tabidoo-autocomplete-button,
+.tabidoo-autocomplete-option:hover .tabidoo-autocomplete-button{
+    background:var(--color-primary);
+	color:#fff;
+}
+.tabidoo-autocomplete-clear-button{
+	position:absolute;
+	background:transparent !important;
+	color:#333;
+	font-size:100%;
+	font-weight:bold;
+	width:1.5em;
+	height:1.5em;
+	line-height:1.6em;
+	border:0 !important;
+	outline:0;
+	border-radius:2px;
+	cursor:pointer;
+	top:35px;
+    right:23px;
+}
+.tabidoo-autocomplete-clear-button:hover{
+	background:var(--color-primary) !important;
+	color:#fff;
+}
