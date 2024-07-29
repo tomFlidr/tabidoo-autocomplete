@@ -6,12 +6,14 @@
 
 Autocomplete component for Tabidoo TypeScript environent.
 
-## Main features
+## Main goals
+- usable via `Scripting Extension` plug-in and `Free HTML` form field,
 - autocompleting values from any Tabidoo table,
 - possible to use for any custom autocompleting without Tabidoo tables,
 - values could be loaded automaticly or by custom handler,
 - custom rendering for autocompleted options and text,
-- TypeScript types and `Scripting Extensions`
+- many other configurations,
+- plain TS without any framework.
 
 ## How to use it
 - Add `Scripting Extensions` plug-in into your Tabidoo application edit
