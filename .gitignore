@@ -400,4 +400,4 @@ FodyWeavers.xsd
 
 js/build/*
 js/libs.orig/*
-src/run.orig.ts
+src/run.ts.orig

@@ -565,9 +565,10 @@ var autoCompleteFactory = (async (doo: IDoo): Promise<ITabidooAutocomplete> => {
 						this.selectOption(this.optionSelected);
 						stopEvent = true;
 					} else if (keyUpper === ' ' ||keyUpper === 'SPACE') {
-						if (e.ctrlKey)
+						if (e.ctrlKey) {
 							this.showWhisper();
-						stopEvent = true;
+							stopEvent = true;
+						}
 					} else if (keyUpper === 'ESCAPE' || keyUpper === 'ESC') {
 						this.hideWhisper();
 						stopEvent = true;
@@ -642,7 +643,11 @@ var autoCompleteFactory = (async (doo: IDoo): Promise<ITabidooAutocomplete> => {
 							valueField = this.config.valueField,
 							textField = this.config.textField;
 						if (response?.data == null || response.data.length === 0) {
-							this.handleResponse(value, options);
+							if (startsWith) {
+								this.handleRequestAuto(value, false);
+							} else {
+								this.handleResponse(value, options);
+							}
 						} else {
 							for (var item of response.data) {
 								options.push(<ITabidooautocompleteOption<TDooApiTable>>{
