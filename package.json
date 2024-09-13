@@ -1,5 +1,5 @@
 {
-    "name": "tabidoo/autocomplete",
+    "name": "@tabidoo/autocomplete",
     "version": "0.0.0",
     "description": "Tabidoo autocomplete script",
     "main": "./src/tableAutocomplete.js",
