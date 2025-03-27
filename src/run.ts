@@ -1,16 +1,19 @@
 (async() => {
-	doo['tableAutocomplete'] = await autoCompleteFactory(doo);
+	await __tabidooInit();
+
+	// init values
+	var value: string = '',
+		text: string = '';
+	if (doo.model.company != null) {
+		value = doo.model.company.value.companyName;
+		text = `${doo.model.company.value.companyName} (${doo.model.company.value.vatId})`;
+	}
 	
-	///@ts-ignore
-	//var value = doo.model.company.value != null ? doo.model.company.value.companyName : '';
-	var value = 'Can 21 s.r.o.';
-	var text = 'Can 21 s.r.o. (26123428)';
 
-
-	var autoComplete = doo.tableAutocomplete.CreateInstance<IDooApiTableCompany>({
-		selector: 'input.tabidoo-autocomplete',
-		tableName: 'company',
+	var autoComplete = doo.tableAutoComplete.Create<IDooApiTableCompany>({
+		selector: '#dev-autocomplete',
 		minLen: 0,
+        //tableName: 'company',
 		value: value,
 		text: text,
 		valueField: 'companyName',
@@ -20,6 +23,7 @@
 		},{
 			name: 'vatId',
 		}],
+		enabled: true,
 		optionRenderer: option => `
 			<div><button value="${option.value}">${option.fields.companyName} (${option.fields.vatId})</button></div>
 		`,
@@ -31,8 +35,10 @@
 			}
 		}
 	});
+
+	
 	autoComplete.AddEventListener('change', e => {
-		//doo.model.firma.setValue(e.GetOptionAfter().value);
+		doo.model.company.setValue(e.GetOptionAfter().value);
 		console.log(e.GetOptionAfter(), autoComplete.GetId());
 	});
 	

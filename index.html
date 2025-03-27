@@ -1,50 +1,49 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
 
-	<link rel="stylesheet" href="./css/common.css" />
+		<!-- local development - Tabidoo css styles -->
+		<link rel="stylesheet" href="./css/common.css" />
+		<link rel="stylesheet" href="./css/tabidoo/styles.css" />
+		<link rel="stylesheet" href="./css/tabidoo/client_default.css" />
+		<link rel="stylesheet" href="./css/tabidoo/animations.css" />
+		<link rel="stylesheet" href="./css/fixes.css" />
+		
+		<!-- local development - style -->
+		<link rel="stylesheet" href="./css/dev.css" />
 
-	<script type="text/javascript" src="./js/libs/doo.js"></script>
+		<!-- local development - `doo` object simulation to load data -->
+		<script type="text/javascript" src="./js/libs/doo.js"></script>
 
-	<script type="text/javascript" src="./js/libs/01.data.start.name.abc.js"></script>
-	<script type="text/javascript" src="./js/libs/02.data.start.ico.123.js"></script>
-	<script type="text/javascript" src="./js/libs/03.data.start.name.abc.or.ico.123.js"></script>
-	<script type="text/javascript" src="./js/libs/04.data.contains.name.omega.or.ico.1234.js"></script>
+		<!-- local development - AJAX data -->
+		<script type="text/javascript" src="./js/libs/01.data.companyName.startWith.A.js"></script>
+		<script type="text/javascript" src="./js/libs/02.data.vatId.startWith.US.js"></script>
+		<script type="text/javascript" src="./js/libs/03.data.companyName.contains.Corp.js"></script>
+		<script type="text/javascript" src="./js/libs/04.data.vatId.cotains.00.js"></script>
+		<script type="text/javascript" src="./js/libs/05.data.company.all.js"></script>
 
-	<script type="text/javascript" src="./js/build/tableAutocomplete.php?js=1"></script>
-</head>
-<body>
-	
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<!-- local development - Tabidoo Custom Script declaration -->
+		<script type="text/javascript" src="./js/build/domHelpers.js"></script>
+		<script type="text/javascript" src="./js/build/tableAutoComplete.php?js=1"></script>
 
-	<!--div class="lightbox">
-		<div class="lightbox-content">
-			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /-->
-			<form id="test-form" action="?submit">
-				<div class="input-cont">
-					<input name="company" type="text" class="tabidoo-autocomplete" value="ABC TRADITIONAL MEDICA s. r. o" />
-				</div>
-				<input type="submit" value="OK" />
-			</form>
-			<!--br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-		</div>
-	</div-->
+		<!-- local development - Tabidoo Custom Script initialization in `doo` object -->
+		<script tyle="text/javascript" src="./js/build/tabidooInit.js"></script>
+	</head>
+	<body>
+		
 
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-	<script tyle="text/javascript" src="js/build/run.js"></script>
-	
-	<input id="test-btn" type="button" value="test" />
-	<script tyle="text/javascript">
-		var btn = document.getElementById('test-btn'),
-			form = document.getElementById('test-form');
-		btn.addEventListener('click', e => {
-			form.innerHTML = '';
-		});
-	</script>
+		<form id="dev-form" action="?submit">
+			<div class="relative-cont">
+				<input id="dev-autocomplete" name="company" type="text" class="form-control" value="" />
+			</div>
+		</form>
+			
 
-</body>
+		<!-- local development - Table AutoComplete initialization -->
+		<script tyle="text/javascript" src="./js/build/run.js"></script>
+		
+
+	</body>
 </html>
