@@ -1,41 +1,49 @@
-input.tabidoo-autocomplete-input{
+:root{
+	--color-autocomplete-hover-bg:var(--bg-brand-hover);
+	--color-autocomplete-hover-text:var(--white);
+	--color-autocomplete-normal-bg:var(--bg-white);
+	--color-autocomplete-normal-text:var(--text-secondary);
+	--color-autocomplete-border-color:var(--surface-border);
+}
+input.table-autocomplete-input{
 	padding-right:calc(1.5em + 12px + 12px) !important;
 }
-.tabidoo-autocomplete-hidden{
+.table-autocomplete-hidden{
 	display:none !important;
 }
-.tabidoo-autocomplete-container{
+.table-autocomplete-container{
 	position:absolute;
 	top:0;
 	left:0;
 }
-.tabidoo-autocomplete-container.tabidoo-autocomplete-fixed{
+.table-autocomplete-container.table-autocomplete-fixed{
 	position:fixed;
 }
-.tabidoo-autocomplete-whisper{
+.table-autocomplete-whisper{
 	position:relative;
-	border:1px solid #c8c8c8;
+	border:1px solid var(--color-autocomplete-border-color);
     padding:0;
 	margin-top:1px;
-	background:#fff;
+	background:var(--color-autocomplete-normal-bg);
 	display:flex;
 	flex-direction:column;
+	max-width:800px;
 }
-.tabidoo-autocomplete-loading{
-	color:var(--color-primary);
+.table-autocomplete-loading{
+	color:var(--color-autocomplete-hover-bg);
 	margin:5px 0;
 	align-self:center;
 }
-.tabidoo-autocomplete-loading,
-.tabidoo-autocomplete-loading:after {
-	box-sizing: border-box;
+.table-autocomplete-loading,
+.table-autocomplete-loading:after {
+	box-sizing:border-box;
 }
-.tabidoo-autocomplete-loading{
+.table-autocomplete-loading{
 	display:inline-block;
 	width:40px;
 	height:40px;
 }
-.tabidoo-autocomplete-loading:after{
+.table-autocomplete-loading:after{
 	content: " ";
 	display: block;
 	width:32px;
@@ -43,10 +51,10 @@ input.tabidoo-autocomplete-input{
 	margin:4px;
 	border-radius:50%;
 	border:3.2px solid currentColor;
-	border-color: currentColor transparent currentColor transparent;
-	animation: tabidoo-autocomplete-loading 1.2s linear infinite;
+	border-color:currentColor transparent currentColor transparent;
+	animation:table-auto-complete-loading 1.2s linear infinite;
 }
-@keyframes tabidoo-autocomplete-loading{
+@keyframes table-auto-complete-loading{
 	0% {
 		transform: rotate(0deg);
 	}
@@ -54,14 +62,14 @@ input.tabidoo-autocomplete-input{
 		transform: rotate(360deg);
 	}
 }
-.tabidoo-autocomplete-options{
+.table-autocomplete-options{
 	overflow-y: auto;
 }
-.tabidoo-autocomplete-option{
+.table-autocomplete-option{
     display:flex;
     flex-direction:row;
 }
-.tabidoo-autocomplete-button{
+.table-autocomplete-button{
 	display:block;
 	white-space:nowrap;
 	width:100%;
@@ -73,30 +81,37 @@ input.tabidoo-autocomplete-input{
     height:40px;
 	background:transparent;
 	cursor:pointer;
-	color:#333;
+	color:var(--color-autocomplete-normal-text);
 }
-.tabidoo-autocomplete-option-active .tabidoo-autocomplete-button,
-.tabidoo-autocomplete-option:hover .tabidoo-autocomplete-button{
-    background:var(--color-primary);
-	color:#fff;
+.table-autocomplete-option-active .table-autocomplete-button,
+.table-autocomplete-option:hover .table-autocomplete-button{
+    background:var(--color-autocomplete-hover-bg);
+	color:var(--color-autocomplete-hover-text);
 }
-.tabidoo-autocomplete-clear-button{
+.table-autocomplete-clear-button{
 	position:absolute;
 	background:transparent !important;
-	color:#333;
+	color:var(--color-autocomplete-normal-text);
 	font-size:100%;
 	font-weight:bold;
 	width:1.5em;
 	height:1.5em;
-	line-height:1.6em;
+	line-height:1.5em;
 	border:0 !important;
 	outline:0;
-	border-radius:2px;
+	border-radius:3px;
 	cursor:pointer;
-	top:35px;
-    right:23px;
+	z-index:1000;
+	top:8px;
+    right:8px;
 }
-.tabidoo-autocomplete-clear-button:hover{
-	background:var(--color-primary) !important;
-	color:#fff;
+form.tbd-form .table-autocomplete-clear-button{
+	top:35px;
+	right:23px;
+}
+.table-autocomplete-clear-button:not(.disabled):hover,
+.table-autocomplete-clear-button:not(.disabled):focus,
+.table-autocomplete-clear-button:not(.disabled):active{
+	background:var(--color-autocomplete-hover-bg) !important;
+	color:var(--color-autocomplete-hover-text);
 }
