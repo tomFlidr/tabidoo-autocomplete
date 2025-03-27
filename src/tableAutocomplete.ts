@@ -1,8 +1,8 @@
 /**
- * Order:           2
- * Property name:   tableAutoComplete
- * Name:            Table AutoComplete
- * Interface:       ITableAutoCompleteFactory
+ * Order:			2
+ * Property name:	tableAutoComplete
+ * Name:			Table AutoComplete
+ * Interface:		ITableAutoCompleteFactory
  */
 var tableAutoCompleteFactory = (async (doo: IDoo): Promise<ITableAutoCompleteFactory> => {
 	// v2025.03.27
@@ -1038,7 +1038,7 @@ var tableAutoCompleteFactory = (async (doo: IDoo): Promise<ITableAutoCompleteFac
 						paddBottom = doo.domHelpers.GetStyleAlt<number>(whisper, 'padding-bottom', true);
 					paddLeft =   !window.isNaN(paddLeft)  ? paddLeft : 0;
 					paddRight =  !window.isNaN(paddRight)  ? paddRight : 0;
-					paddTop =    !window.isNaN(paddTop)    ? paddTop : 0;
+					paddTop =	!window.isNaN(paddTop)	? paddTop : 0;
 					paddBottom = !window.isNaN(paddBottom) ? paddBottom : 0;
 					this.sizes.whisperPaddHSize = paddLeft + paddRight;
 					this.sizes.whisperPaddVSize = paddTop  + paddBottom;
@@ -1049,7 +1049,7 @@ var tableAutoCompleteFactory = (async (doo: IDoo): Promise<ITableAutoCompleteFac
 						borderBottom = doo.domHelpers.GetStyleAlt<number>(whisper, 'border-bottom-width', true);
 					borderLeft =   !window.isNaN(borderLeft)   ? borderLeft : 0;
 					borderRight =  !window.isNaN(borderRight)  ? borderRight : 0;
-					borderTop =    !window.isNaN(borderTop)    ? borderTop : 0;
+					borderTop =	!window.isNaN(borderTop)	? borderTop : 0;
 					borderBottom = !window.isNaN(borderBottom) ? borderBottom : 0;
 					this.sizes.whisperBorderHSize = borderLeft + borderRight;
 					this.sizes.whisperBorderVSize = borderTop  + borderBottom;

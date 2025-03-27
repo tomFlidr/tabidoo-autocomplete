@@ -1,8 +1,8 @@
 /**
- * Order:           2
- * Property name:   tableAutoComplete
- * Name:            Table AutoComplete
- * Interface:       ITableAutoCompleteFactory
+ * Order:			2
+ * Property name:	tableAutoComplete
+ * Name:			Table AutoComplete
+ * Interface:		ITableAutoCompleteFactory
  */
 interface ITableAutoCompleteEvent<TDooApiTable> {
 	GetComponent(): ITableAutoComplete<TDooApiTable>;

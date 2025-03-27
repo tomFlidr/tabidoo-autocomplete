@@ -1,8 +1,8 @@
 /**
- * Order:           1
- * Property name:   domHelpers
- * Name:            DOM Helpers, Filtering Types
- * Interface:       IDomHelpers
+ * Order:			1
+ * Property name:	domHelpers
+ * Name:			DOM Helpers, Filtering Types
+ * Interface:		IDomHelpers
  */
 
 
@@ -16,7 +16,7 @@ type IDooApiTableOrderMoreKeys = (
 	`company.${keyof IDooApiTableCompany}` | 'company.id'
 );
 type IDooApiTableOrderAllKeys = IDooApiTableOrder & {
-    [key in IDooApiTableOrderMoreKeys]: string;
+	[key in IDooApiTableOrderMoreKeys]: string;
 }
 interface IFilterOrder extends IPublicApiFilterGroup {
 	field: keyof IDooApiTableOrderAllKeys & (string | number | symbol);
@@ -34,7 +34,7 @@ type IDooApiTableCompanyMoreKeys = (
 	'id'
 );
 type IDooApiTableCompanyAllKeys = IDooApiTableCompany & {
-    [key in IDooApiTableCompanyMoreKeys]: string;
+	[key in IDooApiTableCompanyMoreKeys]: string;
 }
 interface IFilterCompany extends IPublicApiFilterGroup {
 	field: keyof IDooApiTableCompanyAllKeys & (string | number | symbol);
@@ -52,7 +52,7 @@ interface IDooGetDataOptionCompany extends IDooGetDataOption {
  * DOM Helpers
  */
 interface IDomHelpers {
-    GetUtcDate (): Date;
+	GetUtcDate (): Date;
 	GetById: <TElement extends HTMLElement>(elementId: string, doc?: Document) => TElement;
 	QuerySelector: <TElement extends HTMLElement>(selectors: string, cont?: HTMLElement) => TElement;
 	QuerySelectorAll: <TElement extends HTMLElement>(selectors: string, cont?: HTMLElement) => TElement[];
@@ -67,8 +67,8 @@ interface IDomHelpers {
 	GetRandomString: (length: number, unique?: boolean) => string;
 	GetPageSizes: (currentElm: HTMLElement) => {PageXStart: number, PageYStart: number, PageXEnd: number, PageYEnd: number};
 	Round: (n: number, digits?: number) => number;
-    ParseFloatSafe (strVal: string | null): number | null;
-    ParseIntSafe (strVal: string | null, radix?: number): number | null;
+	ParseFloatSafe (strVal: string | null): number | null;
+	ParseIntSafe (strVal: string | null, radix?: number): number | null;
 	Trim (str: string, charlist?: string): string;
 	SerializeModel (model: IDooModel): string;
 }

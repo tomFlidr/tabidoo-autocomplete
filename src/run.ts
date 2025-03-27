@@ -13,7 +13,7 @@
 	var autoComplete = doo.tableAutoComplete.Create<IDooApiTableCompany>({
 		selector: '#dev-autocomplete',
 		minLen: 0,
-        //tableName: 'company',
+		//tableName: 'company',
 		value: value,
 		text: text,
 		valueField: 'companyName',
