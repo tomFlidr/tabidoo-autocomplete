@@ -397,7 +397,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-
 js/build/*
+!js/build/tableAutoComplete.php
 js/libs.orig/*
 src/run.ts.orig
