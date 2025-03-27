@@ -15,6 +15,8 @@ Autocomplete component for Tabidoo TypeScript environent.
 - many other configurations,
 - plain TS without any framework.
 
+![AutoComplete Preview](https://github.com/tomFlidr/tabidoo-autocomplete/blob/main/gfx/preview.png?raw=true)
+
 ## How to use it
 
 ### 1. Create Extended Scripts
