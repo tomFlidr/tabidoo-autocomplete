@@ -11,3 +11,4 @@
 - New development initialization
 - DOM Helpers library
 - Table AutoComplete library
+- Readme and changelog files
