@@ -1,8 +1,8 @@
 {
     "name": "@tabidoo/autocomplete",
     "version": "0.0.0",
-    "description": "Tabidoo autocomplete script",
-    "main": "./src/tableAutocomplete.js",
+    "description": "Tabidoo AutoComplete Custom Script",
+    "main": "./src/tableAutoComplete.js",
     "author": "",
     "dependencies": {
         "tslib": "^1.14.1"
